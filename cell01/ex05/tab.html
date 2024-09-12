@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Collage</title>
+    <style>
+        .container {
+            overflow: hidden; /* Clears floats */
+        }
+        .div1, .div2 {
+            width: 50%;
+            height: 1000px;
+            display: flex; /* Use Flexbox for centering */
+            align-items: center; /* Vertically center content */
+            justify-content: left; /* Horizontally center content */
+            box-sizing: border-box; /* Ensures padding/borders are included in width/height */
+        }
+        .div1 {
+            background-color: greenyellow;
+            float: left;
+        }
+        .div2 {
+            background-color: pink;
+            float: left; /* Floats both divs side by side */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">greenyellow</div>
+        <div class="div2">pink</div>
+    </div>
+</body>
+</html>
