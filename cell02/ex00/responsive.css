@@ -1,0 +1,53 @@
+/* CSS Document */
+
+        /* Basic reset and styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%; /* Make table cover full width */
+            border-collapse: collapse; /* Collapse borders for better appearance */
+        }
+        th, td {
+            border: 1px solid black; /* Border for table cells */
+            padding: 8px; /* Padding inside cells */
+            text-align: center; /* Center text horizontally */
+        }
+        th {
+            background-color: #f2f2f2; /* Background color for header cells */
+        }
+        /* Responsive design */
+        @media screen and (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid #ccc;
+                margin-bottom: 5px;
+                display: block;
+                position: relative;
+            }
+            td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+                white-space: nowrap;
+            }
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 45%;
+                padding-left: 10px;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+        }
+   
